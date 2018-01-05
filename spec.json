@@ -1,40 +1,31 @@
 {
-  "namespace/BlockName": {
-    "version": "1.0.0",
-    "description": "Description of the block.",
+  "nio/GoogleMapsGeocode": {
+    "version": "0.1.0",
+    "description": "",
     "properties": {
-      "<property1>": {
-        "description": "Required description of the property"
+      "address": {
+        "title": "Street Address",
+        "type": "StringType",
+        "description": "",
+        "default": ""
       },
-      "<property2>": {
-        "default": "Optional metadata with any key.",
-        "description": "Required description of the property"
+      "api_key": {
+        "title": "API Key",
+        "type": "Type",
+        "description": "",
+        "default": "[[GOOGLE_MAPS_API_KEY]]"
       }
     },
     "inputs": {
-      "<input1 | default>": {
-        "description": "Required description of the input"
-      },
-      "<input2>": {
-        "description": "Required description of the input"
+      "default": {
+        "description": ""
       }
     },
     "outputs": {
-      "<output1 | default>": {
-        "description": "Required description of the output"
-      },
-      "<output2>": {
-        "description": "Required description of the output"
+      "default": {
+        "description": ""
       }
     },
-    "commands": {
-      "<command1>": {
-        "description": "Required description of the command",
-        "type": "Optional type and other metadata with any key."
-      },
-      "<command2>": {
-        "description": "Required description of the command"
-      }
-    }
+    "commands": {}
   }
 }
