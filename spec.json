@@ -6,24 +6,24 @@
       "address": {
         "title": "Street Address",
         "type": "Type",
-        "description": "",
+        "description": "Street address to be converted into geographic coordinates",
         "default": ""
       },
       "api_key": {
         "title": "API Key",
         "type": "Type",
-        "description": "",
+        "description": "API Key for the Google Maps API",
         "default": "[[GOOGLE_MAPS_API_KEY]]"
       }
     },
     "inputs": {
       "default": {
-        "description": ""
+        "description": "Any list of signals"
       }
     },
     "outputs": {
       "default": {
-        "description": ""
+        "description": "The input list of signals plus latitude and longitude for the configured address"
       }
     },
     "commands": {}
