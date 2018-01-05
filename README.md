@@ -1,6 +1,6 @@
 GoogleMapsGeocode
 =================
-
+This block receives an incoming signal and will send a request to the Google Maps API in order to geocode the configured address/location.  Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.
 
 Properties
 ----------
