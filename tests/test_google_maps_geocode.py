@@ -11,7 +11,7 @@ class TestGoogleMapsGeocode(NIOBlockTestCase):
         blk = GoogleMapsGeocode()
         config = {
             'api_key': 'AIzaSyBqP8CEkZkJiOHtFtylsazbkGjavbNQeDw',
-            'address': '1600 Amphitheatre Parkway, Mountain View, CA',
+            'address': '{{ $address }}',
         }
         self.configure_block(blk, config)
         blk.start()
