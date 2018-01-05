@@ -5,6 +5,7 @@ from nio.block.base import Block
 from nio.signal.base import Signal
 from nio.properties import Property, StringProperty, VersionProperty
 
+
 class GoogleMapsGeocode(Block):
 
     version = VersionProperty('0.1.0')
@@ -12,14 +13,15 @@ class GoogleMapsGeocode(Block):
     address = Property(title="Street Address", default="")
 
     def process_signals(self, signals):
-        lng=0.0
-        lat=0.0
+        lng = 0.0
+        lat = 0.0
 
         for signal in signals:
-
             gmaps = googlemaps.Client(key=self.api_key())
             geocode_result = gmaps.geocode(str(self.address(signal)))
             lng = geocode_result[0].get('geometry')['location'].get('lng')
             lat = geocode_result[0].get('geometry')['location'].get('lat')
+            setattr(signal, "latitude", lat)
+            setattr(signal, "longitude", lng)
 
-        self.notify_signals(Signal({"lng": lng, "lat": lat}))
+        self.notify_signals(signals)
